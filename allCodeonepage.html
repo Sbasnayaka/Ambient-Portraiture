@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ambient Portraiture | Photography & Videography</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3D493D",
+            beige: "#E8DFCD",
+            cream: "#F7F3EB",
+            soft: "#F3ECDD",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Cormorant Garamond", "serif"]
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(61,73,61,0.08)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: #F7F3EB;
+      color: #3D493D;
+    }
+
+    .glass {
+      backdrop-filter: blur(14px);
+      background: rgba(14, 54, 19, 0);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(26, 67, 26, 0.68), rgba(61,73,61,.18));
+    }
+
+    .fade {
+      animation: fadeUp .9s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .marquee {
+      animation: marquee 28s linear infinite;
+    }
+
+    .marquee:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .logo-float {
+      animation: floaty 5s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0px); opacity: .85; }
+      50% { transform: translateY(-8px); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- Sticky Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-primary/10 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
+
+      <!-- Super small logo -->
+      <a href="#home" class="flex items-center gap-2 shrink-0">
+  <img src="assets/Black 2.png" alt="Logo" class="h-10 w-auto object-contain">
+</a>
+        <div class="leading-none bg-primary/80 px-6 py-2 rounded-full">
+          <div class="text-[11px] text-white font-semibold tracking-[0.35em] uppercase">Ambient</div>
+          <div class="text-[9px] text-white tracking-[0.28em] uppercase opacity-70">Portraiture</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[12px] uppercase tracking-[0.22em] bg-primary/80 px-6 py-2 rounded-full">
+        <a href="#about" class="text-white hover:opacity-60 transition  ">About</a>
+        <a href="#services" class="text-white hover:opacity-60 transition">Services</a>
+        <a href="#portfolio" class="text-white hover:opacity-60 transition">Portfolio</a>
+        <a href="#testimonials" class="text-white hover:opacity-60 transition">Testimonials</a>
+        <a href="#clients" class="text-white hover:opacity-60 transition">Clients</a>
+        <a href="#contact" class="text-white hover:opacity-60 transition">Contact</a>
+      </nav>
+
+      <a href="#contact" class="text-[11px] uppercase tracking-[0.24em] border border-primary px-4 py-2 hover:bg-primary hover:text-white transition">
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- Hero Slider -->
+    <section id="home" class="relative min-h-[calc(100svh-4rem)] overflow-hidden">
+      <div id="heroSlider" class="relative min-h-[calc(100svh-4rem)]">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://i.natgeofe.com/n/650f6ab9-ab62-4e8b-a81f-8b5b80903be8/national-geographic-763303.jpg');"></div>
+          <div class="absolute inset-0 hero-overlay"></div>
+          <div class="relative z-10 min-h-[calc(100svh-4rem)] flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full">
+              <div class="max-w-3xl text-white fade">
+                <p class="text-[11px] uppercase tracking-[0.5em] mb-5 opacity-80">Photography & Videography Studio</p>
+                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+                  Minimal stories.<br>Modern emotion.
+                </h1>
+                <p class="max-w-xl text-white/80 text-base sm:text-lg leading-8 mb-10">
+                  Clean visuals, elegant tones, and cinematic storytelling for weddings, portraits, events, and brands.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <a href="#portfolio" class="bg-white text-primary px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:scale-[1.02] transition">
+                    View Portfolio
+                  </a>
+                  <a href="#contact" class="border border-white text-white px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:bg-white hover:text-primary transition">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://i.natgeofe.com/n/650f6ab9-ab62-4e8b-a81f-8b5b80903be8/national-geographic-763303.jpg');"></div>
+          <div class="absolute inset-0 hero-overlay"></div>
+          <div class="relative z-10 min-h-[calc(100svh-4rem)] flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full">
+              <div class="max-w-3xl text-white fade">
+                <p class="text-[11px] uppercase tracking-[0.5em] mb-5 opacity-80">Creative Direction</p>
+                <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+                  Elegant frames.<br>Timeless results.
+                </h2>
+                <p class="max-w-xl text-white/80 text-base sm:text-lg leading-8 mb-10">
+                  A refined approach that keeps every section visually calm, premium, and easy to explore.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <a href="#services" class="bg-white text-primary px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:scale-[1.02] transition">
+                    Our Services
+                  </a>
+                  <a href="#contact" class="border border-white text-white px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:bg-white hover:text-primary transition">
+                    Book a Call
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://cdn.shopify.com/s/files/1/0163/6622/files/Do_you_need_a_perfect_location_for_amazing_photos.jpg?v=1682103069');"></div>
+          <div class="absolute inset-0 hero-overlay"></div>
+          <div class="relative z-10 min-h-[calc(100svh-4rem)] flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full">
+              <div class="max-w-3xl text-white fade">
+                <p class="text-[11px] uppercase tracking-[0.5em] mb-5 opacity-80">Films & Photography</p>
+                <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+                  Soft tones.<br>Strong impact.
+                </h2>
+                <p class="max-w-xl text-white/80 text-base sm:text-lg leading-8 mb-10">
+                  Designed to feel premium, minimal, and unique while keeping every section visible and organized.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                  <a href="#portfolio" class="bg-white text-primary px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:scale-[1.02] transition">
+                    See Projects
+                  </a>
+                  <a href="#contact" class="border border-white text-white px-7 py-3 text-[11px] uppercase tracking-[0.22em] hover:bg-white hover:text-primary transition">
+                    Get in Touch
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <button id="prevSlide" class="absolute left-4 sm:left-6 bottom-6 z-20 w-11 h-11 rounded-full border border-white/50 text-white hover:bg-white hover:text-primary transition">
+          ‹
+        </button>
+        <button id="nextSlide" class="absolute left-20 sm:left-24 bottom-6 z-20 w-11 h-11 rounded-full border border-white/50 text-white hover:bg-white hover:text-primary transition">
+          ›
+        </button>
+
+        <div class="absolute right-4 sm:right-6 bottom-8 z-20 flex gap-2">
+          <span class="hero-dot w-2.5 h-2.5 rounded-full bg-white"></span>
+          <span class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40"></span>
+          <span class="hero-dot w-2.5 h-2.5 rounded-full bg-white/40"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-24 sm:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">About Us</p>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-none mb-6">
+            Simple, elegant visual storytelling.
+          </h2>
+          <p class="text-base sm:text-lg leading-8 opacity-80 max-w-xl mb-8">
+            We create photography and videography with a minimal modern style, soft natural color grading, and a clean editorial finish that feels timeless.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4 max-w-xl">
+            <div class="p-5 bg-white/60 rounded-2xl shadow-soft">
+              <div class="text-2xl font-display">01</div>
+              <div class="text-sm mt-2 opacity-80">Planning</div>
+            </div>
+            <div class="p-5 bg-white/60 rounded-2xl shadow-soft">
+              <div class="text-2xl font-display">02</div>
+              <div class="text-sm mt-2 opacity-80">Capture</div>
+            </div>
+            <div class="p-5 bg-white/60 rounded-2xl shadow-soft">
+              <div class="text-2xl font-display">03</div>
+              <div class="text-sm mt-2 opacity-80">Deliver</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" class="w-full h-[320px] sm:h-[420px] object-cover rounded-3xl shadow-soft" alt="About image 1">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" class="w-full h-[320px] sm:h-[420px] object-cover rounded-3xl mt-10 shadow-soft" alt="About image 2">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 sm:py-28 bg-beige">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">Services</p>
+            <h2 class="font-display text-4xl sm:text-5xl">What We Do</h2>
+          </div>
+          <p class="max-w-xl text-sm sm:text-base leading-7 opacity-75">
+            Focused packages for photo and video work with a clean, minimal style.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="bg-cream rounded-3xl p-8 shadow-soft border border-primary/5">
+            <p class="text-[11px] uppercase tracking-[0.35em] opacity-60 mb-4">01</p>
+            <h3 class="font-display text-3xl mb-4">Wedding Films</h3>
+            <p class="leading-7 opacity-80">Elegant coverage with cinematic editing and natural emotion.</p>
+          </article>
+
+          <article class="bg-cream rounded-3xl p-8 shadow-soft border border-primary/5">
+            <p class="text-[11px] uppercase tracking-[0.35em] opacity-60 mb-4">02</p>
+            <h3 class="font-display text-3xl mb-4">Portrait Sessions</h3>
+            <p class="leading-7 opacity-80">Minimal portraits with soft light and premium composition.</p>
+          </article>
+
+          <article class="bg-cream rounded-3xl p-8 shadow-soft border border-primary/5">
+            <p class="text-[11px] uppercase tracking-[0.35em] opacity-60 mb-4">03</p>
+            <h3 class="font-display text-3xl mb-4">Brand Content</h3>
+            <p class="leading-7 opacity-80">Modern visuals for brands, products, and social media campaigns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24 sm:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="mb-10">
+          <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">Portfolio</p>
+          <h2 class="font-display text-4xl sm:text-5xl mb-5">All Projects</h2>
+          <p class="max-w-2xl opacity-75 leading-7">
+            Main categories and sub categories shown below for easy browsing.
+          </p>
+        </div>
+
+        <!-- Main categories -->
+        <div class="flex flex-wrap gap-3 mb-5">
+          <button class="portfolio-main-btn px-4 py-2 text-[11px] uppercase tracking-[0.2em] border border-primary bg-primary text-white" data-main="all">All</button>
+          <button class="portfolio-main-btn px-4 py-2 text-[11px] uppercase tracking-[0.2em] border border-primary/20 hover:bg-primary hover:text-white transition" data-main="photo">Photography</button>
+          <button class="portfolio-main-btn px-4 py-2 text-[11px] uppercase tracking-[0.2em] border border-primary/20 hover:bg-primary hover:text-white transition" data-main="video">Videography</button>
+        </div>
+
+        <!-- Sub categories -->
+        <div class="flex flex-wrap gap-2 mb-10">
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="all">All Categories</button>
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="wedding">Wedding</button>
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="portrait">Portrait</button>
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="event">Event</button>
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="brand">Brand</button>
+          <button class="portfolio-sub-btn px-3 py-2 text-[11px] uppercase tracking-[0.18em] border border-primary/20 bg-white" data-sub="reels">Reels</button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="photo" data-sub="wedding">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Wedding photo">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Photography / Wedding</p>
+              <h3 class="font-display text-2xl mt-2">Golden Hour Ceremony</h3>
+            </div>
+          </article>
+
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="photo" data-sub="portrait">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Portrait photo">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Photography / Portrait</p>
+              <h3 class="font-display text-2xl mt-2">Studio Portrait Set</h3>
+            </div>
+          </article>
+
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="video" data-sub="event">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Event video">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Videography / Event</p>
+              <h3 class="font-display text-2xl mt-2">Conference Highlights</h3>
+            </div>
+          </article>
+
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="video" data-sub="reels">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Reels video">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Videography / Reels</p>
+              <h3 class="font-display text-2xl mt-2">Brand Reel Edit</h3>
+            </div>
+          </article>
+
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="photo" data-sub="brand">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Brand photo">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Photography / Brand</p>
+              <h3 class="font-display text-2xl mt-2">Minimal Product Story</h3>
+            </div>
+          </article>
+
+          <article class="portfolio-item group rounded-3xl overflow-hidden shadow-soft border border-primary/5" data-main="photo" data-sub="event">
+            <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16b?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Event photo">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Photography / Event</p>
+              <h3 class="font-display text-2xl mt-2">Corporate Gathering</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 sm:py-28 bg-beige">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">Testimonials</p>
+        <h2 class="font-display text-4xl sm:text-5xl mb-10">Client Words</h2>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <blockquote class="bg-cream rounded-3xl p-8 shadow-soft">
+            <p class="text-lg leading-8 italic">“Clean, calm, and beautifully edited. Exactly the style we wanted.”</p>
+            <footer class="mt-6 text-[11px] uppercase tracking-[0.25em] opacity-60">— Samantha & Marcus</footer>
+          </blockquote>
+
+          <blockquote class="bg-cream rounded-3xl p-8 shadow-soft">
+            <p class="text-lg leading-8 italic">“The team made the whole shoot feel easy and the final video looked premium.”</p>
+            <footer class="mt-6 text-[11px] uppercase tracking-[0.25em] opacity-60">— Anjali R.</footer>
+          </blockquote>
+
+          <blockquote class="bg-cream rounded-3xl p-8 shadow-soft">
+            <p class="text-lg leading-8 italic">“Minimal style, strong storytelling, and very professional delivery.”</p>
+            <footer class="mt-6 text-[11px] uppercase tracking-[0.25em] opacity-60">— Brand Client</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Clients -->
+    <section id="clients" class="py-24 sm:py-28 bg-cream overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="flex items-end justify-between gap-4 mb-8">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">Our Clients</p>
+            <h2 class="font-display text-4xl sm:text-5xl">Floating Logos</h2>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div class="marquee flex w-[200%] gap-6">
+            <div class="w-1/2 flex flex-wrap items-center justify-center gap-6 sm:gap-10 py-10">
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium">Client One</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:1s]">Studio A</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:2s]">Brand X</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:3s]">Wedding House</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:4s]">Media Lab</div>
+            </div>
+            <div class="w-1/2 flex flex-wrap items-center justify-center gap-6 sm:gap-10 py-10">
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium">Client One</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:1s]">Studio A</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:2s]">Brand X</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:3s]">Wedding House</div>
+              <div class="logo-float px-6 py-4 rounded-full border border-primary/10 bg-white shadow-soft text-sm font-medium [animation-delay:4s]">Media Lab</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="py-24 sm:py-28 bg-beige" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 grid lg:grid-cols-2 gap-12">
+        <div>
+          <p class="text-[11px] uppercase tracking-[0.45em] mb-4 opacity-60">Contact Us</p>
+          <h2 class="font-display text-4xl sm:text-5xl mb-6">Let’s create something beautiful.</h2>
+          <p class="leading-8 opacity-80 max-w-xl mb-8">
+            Based in Sri Lanka and available for projects locally and worldwide.
+          </p>
+
+          <div class="space-y-4 text-sm sm:text-base">
+            <p class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-primary"></span> hello@ambientportraiture.lk</p>
+            <p class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-primary"></span> +94 77 123 4567</p>
+            <p class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-primary"></span> Colombo, Sri Lanka</p>
+          </div>
+        </div>
+
+        <form class="bg-cream rounded-3xl p-8 shadow-soft border border-primary/5 space-y-5">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-[11px] uppercase tracking-[0.22em] opacity-60 mb-2 block">Name</label>
+              <input type="text" class="w-full bg-transparent border border-primary/15 rounded-2xl px-4 py-3 outline-none focus:border-primary" placeholder="Your name">
+            </div>
+            <div>
+              <label class="text-[11px] uppercase tracking-[0.22em] opacity-60 mb-2 block">Email</label>
+              <input type="email" class="w-full bg-transparent border border-primary/15 rounded-2xl px-4 py-3 outline-none focus:border-primary" placeholder="Your email">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.22em] opacity-60 mb-2 block">Subject</label>
+            <select class="w-full bg-transparent border border-primary/15 rounded-2xl px-4 py-3 outline-none focus:border-primary">
+              <option>Wedding Inquiry</option>
+              <option>Portrait Session</option>
+              <option>Videography Project</option>
+              <option>Brand / Commercial</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.22em] opacity-60 mb-2 block">Message</label>
+            <textarea rows="5" class="w-full bg-transparent border border-primary/15 rounded-2xl px-4 py-3 outline-none focus:border-primary resize-none" placeholder="Tell us about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="bg-primary text-white px-7 py-3 rounded-2xl text-[11px] uppercase tracking-[0.22em] hover:opacity-90 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <section class="h-[420px] w-full bg-soft">
+      <iframe
+        class="w-full h-full grayscale opacity-90"
+        loading="lazy"
+        allowfullscreen=""
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Colombo%2C%20Sri%20Lanka&z=13&output=embed"
+        style="border:0;">
+      </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-cream py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-10">
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Ambient Portraiture</div>
+            <p class="opacity-75 leading-7 max-w-sm">
+              Minimal photography and videography for modern brands, couples, and creators.
+            </p>
+          </div>
+
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Navigation</div>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <a href="#about" class="hover:opacity-70">About</a>
+              <a href="#services" class="hover:opacity-70">Services</a>
+              <a href="#portfolio" class="hover:opacity-70">Portfolio</a>
+              <a href="#contact" class="hover:opacity-70">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Follow</div>
+            <div class="flex gap-4 text-sm">
+              <a href="#" class="hover:opacity-70">Instagram</a>
+              <a href="#" class="hover:opacity-70">Facebook</a>
+              <a href="#" class="hover:opacity-70">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] uppercase tracking-[0.22em] opacity-60">
+          <p>© 2026 Ambient Portraiture. All rights reserved.</p>
+          <p>Designed with a minimal modern aesthetic.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Hero slider
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".hero-dot");
+    const prevBtn = document.getElementById("prevSlide");
+    const nextBtn = document.getElementById("nextSlide");
+    let currentSlide = 0;
+    let heroTimer;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? "1" : "0";
+        slide.style.pointerEvents = i === index ? "auto" : "none";
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("bg-white", i === index);
+        dot.classList.toggle("bg-white/40", i !== index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      showSlide((currentSlide + 1) % slides.length);
+    }
+
+    function prevSlide() {
+      showSlide((currentSlide - 1 + slides.length) % slides.length);
+    }
+
+    function startHeroAuto() {
+      clearInterval(heroTimer);
+      heroTimer = setInterval(nextSlide, 6000);
+    }
+
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startHeroAuto();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startHeroAuto();
+    });
+
+    showSlide(0);
+    startHeroAuto();
+
+    // Portfolio filters
+    const mainBtns = document.querySelectorAll(".portfolio-main-btn");
+    const subBtns = document.querySelectorAll(".portfolio-sub-btn");
+    const items = document.querySelectorAll(".portfolio-item");
+
+    let activeMain = "all";
+    let activeSub = "all";
+
+    function applyFilters() {
+      items.forEach(item => {
+        const main = item.dataset.main;
+        const sub = item.dataset.sub;
+        const visibleMain = activeMain === "all" || main === activeMain;
+        const visibleSub = activeSub === "all" || sub === activeSub;
+        item.style.display = (visibleMain && visibleSub) ? "block" : "none";
+      });
+    }
+
+    mainBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeMain = btn.dataset.main;
+        mainBtns.forEach(b => {
+          b.classList.remove("bg-primary", "text-white");
+          b.classList.add("border-primary/20");
+        });
+        btn.classList.add("bg-primary", "text-white");
+        btn.classList.remove("border-primary/20");
+        applyFilters();
+      });
+    });
+
+    subBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeSub = btn.dataset.sub;
+        subBtns.forEach(b => b.classList.remove("bg-primary", "text-white"));
+        btn.classList.add("bg-primary", "text-white");
+        applyFilters();
+      });
+    });
+
+    applyFilters();
+  </script>
+</body>
+</html>
