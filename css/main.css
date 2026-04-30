@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Fritz';
+  src: url('../Font/Fritz-aYB1E.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #F7F3EB;
+  color: #3D493D;
+}
+
+.glass {
+  backdrop-filter: blur(14px);
+  background: rgba(14, 54, 19, 0);
+}
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(26, 67, 26, 0.68), rgba(61,73,61,.18));
+}
+
+.fade {
+  animation: fadeUp .9s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-float {
+  animation: floaty 5s ease-in-out infinite;
+  /* Green shining effect using #3D493D (rgb: 61, 73, 61) */
+  box-shadow: 0 0 15px rgba(61, 73, 61, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.logo-float:hover {
+  box-shadow: 0 0 25px rgba(61, 73, 61, 0.8);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); opacity: .85; }
+  50% { transform: translateY(-8px); opacity: 1; }
+}
+
+/* Floating WhatsApp Icon */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 55px;
+  height: 55px;
+  z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #25D366; /* WhatsApp brand color behind the transparent icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-whatsapp img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}

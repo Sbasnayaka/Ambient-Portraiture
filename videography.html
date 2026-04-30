@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videography | Ambient Portraiture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="font-sans antialiased bg-cream">
+
+  <!-- Sticky Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-primary/10 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
+
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/Black 2.png" alt="Logo" class="h-10 w-auto object-contain">
+        <div class="leading-none bg-primary/80 px-6 py-2 rounded-full">
+          <div class="text-[11px] text-white font-semibold tracking-[0.35em] uppercase">Ambient</div>
+          <div class="text-[9px] text-white tracking-[0.28em] uppercase opacity-70">Portraiture</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[12px] uppercase tracking-[0.22em] bg-primary/80 px-6 py-2 rounded-full">
+        <a href="index.html#about" class="text-white hover:opacity-60 transition">About</a>
+        <a href="index.html#services" class="text-white hover:opacity-60 transition">Services</a>
+        <a href="photography.html" class="text-white hover:opacity-60 transition">Photography</a>
+        <a href="videography.html" class="text-white hover:opacity-60 transition font-semibold">Videography</a>
+        <a href="#clients" class="text-white hover:opacity-60 transition">Clients</a>
+        <a href="index.html#contact" class="text-white hover:opacity-60 transition">Contact</a>
+      </nav>
+
+      <a href="index.html#contact" class="text-[11px] uppercase tracking-[0.24em] border border-primary px-4 py-2 hover:bg-primary hover:text-white transition">
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[50svh] flex items-center overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full pt-16">
+        <div class="max-w-3xl text-white fade">
+          <p class="text-[11px] uppercase tracking-[0.5em] mb-5 opacity-80">Our Work</p>
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+            Videography.
+          </h1>
+          <p class="max-w-xl text-white/80 text-base sm:text-lg leading-8">
+            Cinematic event coverage, engaging social media reels, and high-end brand films.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Projects -->
+    <section class="py-24 sm:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="mb-10">
+          <h2 class="font-display text-4xl sm:text-5xl mb-5">Videography Projects</h2>
+          <p class="max-w-2xl opacity-75 leading-7">
+            Browse through our curated collection of cinematic work.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group rounded-3xl overflow-hidden shadow-soft border border-primary/5">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Event video">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Videography / Event</p>
+              <h3 class="font-display text-2xl mt-2">Conference Highlights</h3>
+            </div>
+          </article>
+
+          <article class="group rounded-3xl overflow-hidden shadow-soft border border-primary/5">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" class="h-80 w-full object-cover group-hover:scale-[1.03] transition duration-500" alt="Reels video">
+            <div class="p-5 bg-white">
+              <p class="text-[11px] uppercase tracking-[0.25em] opacity-60">Videography / Reels</p>
+              <h3 class="font-display text-2xl mt-2">Brand Reel Edit</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-cream py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div class="grid md:grid-cols-3 gap-10">
+          <div>
+            <img src="assets/footer-logo.png" alt="Ambient Portraiture" class="h-12 w-auto mb-4 object-contain">
+            <p class="opacity-75 leading-7 max-w-sm">
+              Minimal photography and videography for modern brands, couples, and creators.
+            </p>
+          </div>
+
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Navigation</div>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <a href="index.html#about" class="hover:opacity-70">About</a>
+              <a href="index.html#services" class="hover:opacity-70">Services</a>
+              <a href="index.html#portfolio" class="hover:opacity-70">Portfolio</a>
+              <a href="index.html#contact" class="hover:opacity-70">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Follow</div>
+            <div class="flex gap-4 text-sm">
+              <a href="#" class="hover:opacity-70">Instagram</a>
+              <a href="#" class="hover:opacity-70">Facebook</a>
+              <a href="#" class="hover:opacity-70">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] uppercase tracking-[0.22em] opacity-60">
+          <p>© 2026 Ambient Portraiture. All rights reserved.</p>
+          <p>Designed with a minimal modern aesthetic.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/94771234567" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
