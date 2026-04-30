@@ -13,6 +13,7 @@
   <script src="js/tailwind.config.js"></script>
   
   <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="assets/fav-icon.png">
 </head>
 
 <body class="font-sans antialiased bg-cream">
@@ -34,15 +35,33 @@
         <a href="index.html#services" class="text-white hover:opacity-60 transition">Services</a>
         <a href="photography.html" class="text-white hover:opacity-60 transition">Photography</a>
         <a href="videography.html" class="text-white hover:opacity-60 transition font-semibold">Videography</a>
-        <a href="#clients" class="text-white hover:opacity-60 transition">Clients</a>
+        <a href="index.html#clients" class="text-white hover:opacity-60 transition">Clients</a>
         <a href="index.html#contact" class="text-white hover:opacity-60 transition">Contact</a>
       </nav>
 
-      <a href="index.html#contact" class="text-[11px] uppercase tracking-[0.24em] border border-primary px-4 py-2 hover:bg-primary hover:text-white transition">
-        Book Now
-      </a>
+      <div class="flex items-center gap-4">
+        <a href="index.html#contact" class="hidden sm:block text-[11px] uppercase tracking-[0.24em] border border-primary px-4 py-2 hover:bg-primary hover:text-white transition">
+          Book Now
+        </a>
+        
+        <button id="hamburger-btn" class="lg:hidden hamburger flex flex-col justify-center items-center z-50">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 text-2xl uppercase tracking-[0.2em] lg:hidden">
+    <a href="index.html#about" class="mobile-link hover:opacity-60 transition">About</a>
+    <a href="index.html#services" class="mobile-link hover:opacity-60 transition">Services</a>
+    <a href="photography.html" class="mobile-link hover:opacity-60 transition">Photography</a>
+    <a href="videography.html" class="mobile-link hover:opacity-60 transition font-semibold">Videography</a>
+    <a href="index.html#clients" class="mobile-link hover:opacity-60 transition">Clients</a>
+    <a href="index.html#contact" class="mobile-link hover:opacity-60 transition">Contact</a>
+  </div>
 
   <main class="pt-16">
 
@@ -105,35 +124,38 @@
           </div>
 
           <div>
-            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Navigation</div>
+            <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Quick Links</div>
             <div class="grid grid-cols-2 gap-3 text-sm">
               <a href="index.html#about" class="hover:opacity-70">About</a>
               <a href="index.html#services" class="hover:opacity-70">Services</a>
               <a href="index.html#portfolio" class="hover:opacity-70">Portfolio</a>
               <a href="index.html#contact" class="hover:opacity-70">Contact</a>
+              <a href="photography.html" class="hover:opacity-70">Photography</a>
+              <a href="videography.html" class="hover:opacity-70">Videography</a>
             </div>
           </div>
 
           <div>
             <div class="text-[11px] uppercase tracking-[0.35em] mb-4 opacity-70">Follow</div>
-            <div class="flex gap-4 text-sm">
-              <a href="#" class="hover:opacity-70">Instagram</a>
-              <a href="#" class="hover:opacity-70">Facebook</a>
-              <a href="#" class="hover:opacity-70">YouTube</a>
+            <div class="flex gap-5">
+              <a href="#" class="hover:opacity-70 transition w-5 h-5"><img src="assets/instagram.png" alt="Instagram" class="w-full h-full object-contain opacity-80"></a>
+              <a href="#" class="hover:opacity-70 transition w-5 h-5"><img src="assets/facebook.png" alt="Facebook" class="w-full h-full object-contain opacity-80"></a>
+              <a href="#" class="hover:opacity-70 transition w-5 h-5"><img src="assets/tiktok.png" alt="TikTok" class="w-full h-full object-contain opacity-80"></a>
+              <a href="#" class="hover:opacity-70 transition w-5 h-5"><img src="assets/whatsapp.png" alt="WhatsApp" class="w-full h-full object-contain opacity-80"></a>
             </div>
           </div>
         </div>
 
         <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[11px] uppercase tracking-[0.22em] opacity-60">
-          <p>© 2026 Ambient Portraiture. All rights reserved.</p>
-          <p>Designed with a minimal modern aesthetic.</p>
+          <p>© 2026 | All Rights Reserved | ambientportraiture.lk | Designed by: <a href="http://www.asseminate.com" target="_blank" class="hover:text-white transition">Asseminate</a></p>
+          <p>Wedding | Events | Corporates </p>
         </div>
       </div>
     </footer>
   </main>
 
   <!-- Floating WhatsApp Icon -->
-  <a href="https://wa.me/94771234567" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/94718456999" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
     <img src="assets/whatsapp.png" alt="WhatsApp">
   </a>
 

@@ -99,4 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applyFilters();
   }
+
+  // Hamburger Menu
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.classList.toggle('overflow-hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+      });
+    });
+  }
 });
